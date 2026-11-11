@@ -1,5 +1,5 @@
 /**
- * The bot's own commands, which family members send in Telegram to link and unlink chats. They are
+ * The bot's own commands, which connected people send in Telegram to link and unlink chats. They are
  * handled by the gatekeeper, never stored or delivered to agents.
  */
 
@@ -39,7 +39,7 @@ export function newLinkCode(): string {
 
 export const LINK_CODE_PATTERN = /^[A-Za-z0-9_-]{24}$/;
 
-/** What the bot answers, in plain words for family members. */
+/** What the bot answers, in plain words for the people using the bot. */
 export const REPLIES = {
   linked: "Linked to your Cloudflare OS. Go back to the connect page there to finish. " +
     "To use me in a group, tap Add to a group.",
@@ -54,7 +54,7 @@ export const REPLIES = {
   unlinked: "Unlinked. Cloudflare OS no longer reads or sends messages in this chat.",
   notYours: "Only the person who linked this chat can unlink it.",
   notLinked: "This chat isn't linked to Cloudflare OS.",
-  private: "This is a private family bot. To use it, connect Telegram in Cloudflare OS.",
+  private: "This is a private bot. To use it, connect Telegram in Cloudflare OS.",
 } as const;
 
 /**

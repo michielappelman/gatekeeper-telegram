@@ -1,7 +1,7 @@
 import type { RpcStub, RpcTarget } from "cloudflare:workers";
 
 /**
- * The family's Telegram bot, as one user reaches it: all their linked chats with it.
+ * The deployment's shared Telegram bot, as one user reaches it: all their linked chats with it.
  *
  * Each person connects their own Telegram in Cloudflare OS (Connectors, Telegram); their private
  * chat with the bot is then linked, and so is any group they add the bot to. The bot only sees

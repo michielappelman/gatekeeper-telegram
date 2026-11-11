@@ -1,6 +1,6 @@
 /**
  * Connecting Telegram from Cloudflare OS: one page that links the person's Telegram account to a
- * new connection on the family's one bot.
+ * new connection on the deployment's one shared bot.
  *
  * `connectAccount()` starts a TelegramConnect object holding the Workshop's callback, a nonce for
  * the page's URL, and a fresh account id. The page shows a link code for that account
@@ -164,7 +164,7 @@ function connectPageHtml(status: Exclude<ConnectStatus, { kind: "invalid" }>, er
   const step = status.kind === "linked"
     ? `<p class="sub">Linked to ${escapeHtml(status.name)} in Telegram. Finish to add the connection.</p>
 <form method="POST"><button type="submit">Finish connecting</button></form>`
-    : `<p class="sub">Link your Telegram to the family bot, @${escapeHtml(status.code.botUsername)}.</p>
+    : `<p class="sub">Link your Telegram to the shared bot, @${escapeHtml(status.code.botUsername)}.</p>
 ${error ? `<p class="err">${escapeHtml(error)}</p>` : ""}
 <ol>
 <li><a class="button" href="${escapeHtml(status.code.url)}" target="_blank" rel="noopener">Open Telegram</a><br>

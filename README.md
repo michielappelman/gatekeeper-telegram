@@ -82,8 +82,8 @@ your Telegram account, and your private chat, to the new connection; groups stay
 connection that linked them.
 
 Messages in chats nobody linked are neither stored nor shown to any agent. A private chat, or a
-group message that @mentions the bot, is answered (at most once a day) that the bot is private;
-being added to a group, or anything else said there, gets no reply.
+group message that @mentions the bot, is answered (at most once a day) with "This is a private
+bot"; being added to a group, or anything else said there, gets no reply.
 
 ## Agent API
 
@@ -379,8 +379,9 @@ contributors and agents are in [AGENTS.md](AGENTS.md).
 - **Deleting is time-limited.** Telegram lets a bot delete its own messages for 48 hours.
 - **One bot per deployment.** Everyone shares it; a second bot needs a second deployment of the
   Worker.
-- **Wording.** The bot's replies and the connector's texts call it the "family bot". They live in
-  `src/commands.ts`, `src/resource.ts` and `GatekeeperVendor.describe()` in `src/telegram.ts`.
+- **Wording.** The bot's replies and the connector's texts call it the "shared bot". To rename it
+  for a deployment, they live in `src/commands.ts`, `src/resource.ts`, `src/connect.ts` and
+  `GatekeeperVendor.describe()` in `src/telegram.ts`.
 - **Not an identity provider.** `getAuthenticatedEmail()` returns `null`.
 
 ## License

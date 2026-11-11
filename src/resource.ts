@@ -20,7 +20,7 @@ export const CHAT_RESOURCE: SupportedResource = {
 export const BOT_RESOURCE: SupportedResource = {
   urlPattern: `https://${HOST}/:bot`,
   title: "All your Telegram chats",
-  description: "Every chat you link with the family bot, including ones you link later.",
+  description: "Every chat you link with the shared bot, including ones you link later.",
 };
 
 export const SUPPORTED_RESOURCES: SupportedResource[] = [CHAT_RESOURCE, BOT_RESOURCE];

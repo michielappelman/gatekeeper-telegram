@@ -173,7 +173,7 @@ export default {
 };
 
 // ---------------------------------------------------------------------------
-// Vendor -- each person connects their own Telegram to the family's one bot; a connection is an id
+// Vendor -- each person connects their own Telegram to the deployment's one shared bot; a connection is an id
 // the bot's hub keys that person's chats by.
 
 @validateRpc()
@@ -184,9 +184,9 @@ export class GatekeeperVendor extends WorkerEntrypoint<Env> implements Gatekeepe
       url: "https://telegram.org",
       logo: TELEGRAM_LOGO,
       color: "#e3f4fd",
-      tagline: "Message your agents through the family Telegram bot",
+      tagline: "Message your agents through the shared Telegram bot",
       description:
-          "Connect your Telegram to the family bot, then choose which of your chats with it each " +
+          "Connect your Telegram to the shared bot, then choose which of your chats with it each " +
           "gadget may read, receive and send messages in: your private chat, or groups you add " +
           "the bot to.",
       providesAuth: false,
